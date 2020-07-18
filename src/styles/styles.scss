@@ -2,3 +2,35 @@
 // If need, change your variables before importing Bulma
 $title-color: #ff0000;
 @import "~bulma/bulma.sass";
+
+.content {
+    min-height: 100%;
+}
+
+.sidebar {
+    max-width: 70px;
+    border-right: 1px solid black;
+}
+
+.about {
+    border-right: 1px solid black;
+}
+
+.navbar {
+    border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 769px) {
+    .wrapper .columns {
+        margin-top: none;
+        height: calc(100vh - ( 3.3rem) );
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+
+   .sidebar {
+       display: none;
+   }
+}
