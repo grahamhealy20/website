@@ -5,16 +5,18 @@ import Sidebar from '../components/sidebar'
 export default function Home() {
   return (
     <Layout>
-      <div className="columns">
-        <section className="sidebar column">
-          <Sidebar></Sidebar>
-        </section>
-        <section className="about column is-two-thirds">
-          About
+      <div className="container-fluid">
+        <div className="columns is-gapless">
+          <section className="sidebar column">
+            <Sidebar></Sidebar>
+          </section>
+          <section className="about column is-two-thirds">
+            About
       </section>
-        <section className="blog-posts column">
-          Posts
+          <section className="blog-posts column">
+            Posts
       </section>
+        </div>
       </div>
     </Layout>
   )

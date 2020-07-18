@@ -3,19 +3,6 @@
 $title-color: #ff0000;
 @import "~bulma/bulma.sass";
 
-.content {
-    min-height: 100%;
-}
-
-.sidebar {
-    max-width: 70px;
-    border-right: 1px solid black;
-}
-
-.about {
-    border-right: 1px solid black;
-}
-
 .navbar {
     border-bottom: 1px solid black;
 }
@@ -26,6 +13,14 @@ $title-color: #ff0000;
         height: calc(100vh - ( 3.3rem) );
     }
 
+    .sidebar {
+        max-width: 70px;
+        border-right: 1px solid black;
+    }
+    
+    .about {
+        border-right: 1px solid black;
+    }
 }
 
 @media screen and (max-width: 769px) {
@@ -33,4 +28,9 @@ $title-color: #ff0000;
    .sidebar {
        display: none;
    }
+
+   .about {
+       border-bottom: 1px solid black;
+   }
+   
 }
