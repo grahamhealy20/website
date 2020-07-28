@@ -1,19 +1,28 @@
 @charset "utf-8";
 // If need, change your variables before importing Bulma
-$title-color: #ff0000;
+// $title-color: #ff0000;
 @import "~bulma/bulma.sass";
 
 .navbar {
     border-bottom: 1px solid black;
 }
 
+
+
 @media screen and (min-width: 769px) {
     .wrapper .columns {
         margin-top: none;
-        height: calc(100vh - ( 3.3rem) );
+        height: calc(100vh - 5rem);
+    }
+
+    .navbar .sidebar-padding {
+        max-width: 58px;
+        width: 58px;
+        border-right: 1px solid black;
     }
 
     .sidebar {
+        width: 70px;
         max-width: 70px;
         border-right: 1px solid black;
     }
@@ -21,9 +30,20 @@ $title-color: #ff0000;
     .about {
         border-right: 1px solid black;
     }
+
+    .hero-title {
+        font-size: 5em;
+    }
 }
 
+
+
 @media screen and (max-width: 769px) {
+
+    .hero-title {
+        font-size: 5rem;
+    }
+    
 
    .sidebar {
        display: none;
@@ -38,7 +58,6 @@ $title-color: #ff0000;
 
 .about .hero-title {
     font-family: 'Poppins';
-    font-size: 8rem;
     font-weight: 600;
 }
 
@@ -50,7 +69,19 @@ body {
     font-family: "IBM Plex Mono", monospace;
 }
 
+.blog-posts {
+    overflow-y: scroll;
+}
 
 .blog-post {
     margin-bottom: 50px;
+}
+
+.year {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    font-weight: 500;
+    font-size:2.5rem;
+    margin-top: 1rem;
+    letter-spacing: .3rem;
 }

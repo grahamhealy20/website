@@ -3,7 +3,9 @@ import { Link } from "gatsby"
 
 const Sidebar = () => (
     <div>
-        2020
+        <span className="year">
+            2020
+        </span>
     </div>
 )
 
