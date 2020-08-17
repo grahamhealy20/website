@@ -7,5 +7,5 @@ const path = require(`path`)
 
 module.exports = {
   /* Your site config here */
-  plugins: ['gatsby-plugin-sass', 'gatsby-transformer-sharp', 'gatsby-plugin-sharp'],
+  plugins: ['gatsby-plugin-sass', 'gatsby-transformer-sharp', 'gatsby-plugin-sharp', 'gatsby-plugin-react-svg'],
 }
