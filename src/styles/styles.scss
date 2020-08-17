@@ -48,45 +48,32 @@ html {
     html {
         overflow: hidden;
     }
-
-
 }
 
 @media screen and (min-width: 769px) {
-    
     .hero-wrapper .columns {
         height: 100vh;
     }
 
-    .navbar .sidebar-padding {
-        max-width: 58px;
-        width: 58px;
-        border-right: 1px solid black;
-    }
-
-    .sidebar {
-        width: 70px;
-        max-width: 70px;
-        border-right: 1px solid black;
-    }
-    
-    .about {
-        border-right: 1px solid black;
-    }
-
-    .hero-title {
-        font-size: 5em;
-    }
-}
-
-
-
-@media screen and (max-width: 769px) {
-
     .hero-title {
         font-size: 5rem;
     }
-    
+}
+
+// Change some elements and change font sizes on mobile
+@media screen and (max-width: 1024px) {
+    // TODO: Create a mobile friendly background image for the different aspect-ratio
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .full-stack-badge {
+        display: none;
+    }
+   
+    .year-accent {
+        position: static;
+    }
 }
 
 .hero-title {

@@ -12,7 +12,7 @@ const Hero = () => (
         <div className="profile-image column">
             <div className="section">
                 <figure className="image is-3by4">
-                    <img src={profilePhoto} alt="Picture of Graham"></img>
+                    <img src={profilePhoto} alt="Graham Healy"></img>
                 </figure>
             </div>
         </div>
