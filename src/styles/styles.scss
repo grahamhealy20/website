@@ -68,11 +68,18 @@ html {
     }
 
     .full-stack-badge {
-        display: none;
+        display: none;    
     }
    
     .year-accent {
         position: static;
+    }
+}
+
+// Change some elements and change font sizes on mobile
+@media screen and (max-height: 1100px) {
+    .full-stack-badge {
+        display: none;    
     }
 }
 
@@ -87,4 +94,22 @@ h2, h3 {
 
 body {
     font-family: "IBM Plex Mono", monospace;
+}
+
+
+.contact-me {
+    padding-top: 2rem;
+}
+
+.contact-me a {
+    &::after {
+        padding: 5rem;
+        content: '-';
+    }
+
+    &:last-child::after {
+        padding-left: 5rem;
+        content: '';
+    }
+
 }
