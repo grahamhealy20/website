@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import BlogPostLayout from "../components/layouts/blog-post-layout"
+import BlogLayout from "../components/layouts/blog-layout"
 
 export default function Template({
     data, // this prop will be injected by the GraphQL query below.
@@ -9,18 +9,21 @@ export default function Template({
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
     return (
-        <BlogPostLayout>
-            <div className="blog-post-container">
+        <BlogLayout>
+            <div>
                 <div className="blog-post">
-                    <h1>{frontmatter.title}</h1>
-                    <h2>{frontmatter.date}</h2>
+                    <div>
+                        <h1 className="title is-1">{frontmatter.title}</h1>
+                        <h2>{frontmatter.date}</h2>
+                    </div>
+
                     <div
                         className="blog-post-content"
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
                 </div>
             </div>
-        </BlogPostLayout>
+        </BlogLayout>
     )
 }
 export const pageQuery = graphql`
