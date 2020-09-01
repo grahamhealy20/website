@@ -1,8 +1,8 @@
 import React, { createRef } from "react"
-import Layout from "../components/layout"
-import Hero from '../components/hero'
-import YearAccent from '../components/year_accent'
-import FullStackBadge from '../components/full_stack_badge'
+import Layout from "../components/layouts/layout"
+import Hero from '../components/home/hero'
+import YearAccent from '../components/misc/year-accent'
+import FullStackBadge from '../components/home/full-stack-badge'
 import { Linear, TweenMax, TimelineMax, Power3 } from "gsap";
 
 export default class Home extends React.Component {

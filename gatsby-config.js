@@ -7,5 +7,18 @@ const path = require(`path`)
 
 module.exports = {
   /* Your site config here */
-  plugins: ['gatsby-plugin-sass', 'gatsby-transformer-sharp', 'gatsby-plugin-sharp', 'gatsby-plugin-react-svg'],
+  plugins: [
+    'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-svg',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
+    'gatsby-transformer-remark',
+  ],
 }
