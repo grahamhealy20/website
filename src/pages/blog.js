@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from 'gatsby'
+
 import BlogLayout from "../components/layouts/blog-layout"
 import BlogPostLink from "../components/blog/blog-post-link"
 
