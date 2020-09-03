@@ -2,21 +2,19 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import BlogLayout from "../components/layouts/blog-layout"
+import BlogPostDetails from "../components/blog/blog-post-details"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+
   return (
     <BlogLayout>
       <div>
         <div className="blog-post">
-          <div>
-            <h1 className="title is-1">{frontmatter.title}</h1>
-            <h2>{frontmatter.date}</h2>
-          </div>
-
+          <BlogPostDetails frontmatter={frontmatter} />
           <div
             className="blog-post-content content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -34,6 +32,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 630) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

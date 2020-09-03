@@ -4,7 +4,7 @@ import Navbar from "../misc/navbar"
 
 const BlogLayout = ({ children }) => {
     return (
-        <div className="container">
+        <div className="blog container">
             <Navbar />
             {children}
         </div>

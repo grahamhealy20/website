@@ -10,15 +10,35 @@ $background-primary: #8f57e2;
 $background-secondary: #f3c1bb;
 
 // If need, change your variables before importing Bulma
-$text: $primary;
 $title-color: $primary;
+$content-heading-color: $primary;
+
+$link: $primary;
+$link-hover: $tertiary;
+$navbar-item-color: $primary;
+$navbar-item-hover-color: $tertiary;
 
 @import "~bulma/bulma.sass";
 
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', 'sans-serif' !important;
+}
+
+body {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+a {
+    transition: color 0.2s ease-out !important;
+}
+
 ::-moz-selection { background: $tertiary; color: $secondary }
 ::selection { background: $tertiary; color: $secondary}
 
+
+// Home/Landing page
+// Static/fixed elements
 .year-accent {
     position: absolute;
     top: 30px;
@@ -28,94 +48,88 @@ $title-color: $primary;
     writing-mode: vertical-rl;
     display: inline-block;
     text-orientation: upright;
+
+    @media screen and (min-width: 1024px) { 
+        position: fixed;
+    }
+
+    @media screen and (max-width: 1223px), (max-height : 900px) {
+        position: static;
+    }
 }
 
 .full-stack-badge {
     position: fixed;
     bottom: 65px;
     left: 60px;
+
+    @media screen and (min-width: 1024px) {
+        img { 
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @media screen and (max-width: 1223px), (max-height : 900px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 2000px) and (max-height: 1200px) { 
+       img {
+            width: 200px;
+            height: 200px;
+        }
+    }
 }
 
 // Set background image
 // TODO: Try to recreate this using css gradients
-html {
+.hero {
     background-image: url('./website_background.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-// Set elements on high resolution devices
-@media screen and (min-width: 1024px) { 
-    html {
-        overflow: hidden;
-    }
-
-    .year-accent {
-        position: fixed;
-    }
-
-    .full-stack-badge img {
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .hero-wrapper .columns {
-        height: 100vh;
-    }
-
-    .hero-title {
-        font-size: 5rem;
-    }
-}
-
-@media screen and (max-width: 1223px), (max-height : 900px){
-    .full-stack-badge {
-        display: none;    
-    }
-
-    .hero-title {
-        font-size: 3rem;
-    }
-   
-    .year-accent {
-        position: static;
-    }
-}
-
-// Change spinner size on low height windows
-@media screen and (max-width: 2000px) and (max-height: 1200px) {
-    .full-stack-badge img {
-        width: 200px;
-        height: 200px;
-    }
+    color: $primary;
 }
 
 .hero-title {
     font-weight: 700;
-}
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Poppins' !important;
-}
+    @media screen and (min-width: 769px) {
+        font-size: 5rem;
+    }
 
-body {
-    font-family: "IBM Plex Mono", monospace;
+    @media screen and (max-width: 1223px), (max-height : 900px) {
+        font-size: 3rem;
+    }
 }
 
 .contact-me {
     padding-top: 2rem;
-}
 
-.contact-me a {
-    &::after {
+    a {
+        &::after {
         margin: 5rem;
         content: '-';
-    }
+        }
 
-    &:last-child::after {
-        padding-left: 5rem;
-        content: '';
+        &:last-child::after {
+            padding-left: 5rem;
+            content: '';
+        }
+    }
+}
+
+// Blog layout
+.blog {
+    &.container {
+        @media screen and (min-width: 1408px) {
+            max-width: 680;
+        }
+        @media screen and (min-width: 1216px) {
+            max-width: 680px;
+        }
+        @media screen and (min-width: 1024px) {
+            max-width: 680px;
+        }
     }
 }

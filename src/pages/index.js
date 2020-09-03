@@ -5,6 +5,7 @@ import YearAccent from '../components/misc/year-accent'
 import FullStackBadge from '../components/home/full-stack-badge'
 import { Linear, TweenMax, TimelineMax, Power3 } from "gsap";
 
+
 export default class Home extends React.Component {
   constructor() {
     /*

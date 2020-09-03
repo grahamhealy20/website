@@ -27,10 +27,6 @@ const Hero = React.forwardRef((props, ref) => {
                 </div>
             </div>
         </div>
-
-
-
-
     )
 });
 
