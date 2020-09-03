@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 const Hero = React.forwardRef((props, ref) => {
     return (
 
-        <div className="columns is-desktop is-vcentered">
+        <div className="columns is-vcentered">
             <div className="column is-two-thirds ">
                 <section className="section about-me">
                     <h1 className="title hero-title" ref={ref['title']}>graham healy</h1>
