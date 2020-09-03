@@ -42,14 +42,20 @@ body, html {
 // Set background image
 // TODO: Try to recreate this using css gradients
 html {
-    background-image: url('./website_background_no_noise.jpg');
+    background-color: rgb(243,193,187);
+    background-image: url('./website_background_no_noise.jpg') !important;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 // Disable bulma scrollbar on desktop 
 @media screen and (min-width: 1024px) { 
     html {
         overflow: hidden;
+    }
+
+    .year-accent {
+        position: fixed;
     }
 
     .full-stack-badge img {
@@ -68,21 +74,17 @@ html {
     }
 }
 
-@media screen and (max-height : 900px){
+@media screen and (max-width: 1220px) and (max-height : 900px){
     .full-stack-badge {
         display: none;    
     }
 }
 
 // Change some elements and change font sizes on mobile
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     // TODO: Create a mobile friendly background image for the different aspect-ratio
     .hero-title {
         font-size: 3rem;
-    }
-
-    .full-stack-badge {
-        display: none;    
     }
    
     .year-accent {
@@ -99,11 +101,10 @@ html {
 }
 
 .hero-title {
-    font-family: 'Poppins';
     font-weight: 700;
 }
 
-h2, h3 {
+h1, h2, h3 {
     font-family: 'Poppins' !important;
 }
 
@@ -126,5 +127,4 @@ body {
         padding-left: 5rem;
         content: '';
     }
-
 }
