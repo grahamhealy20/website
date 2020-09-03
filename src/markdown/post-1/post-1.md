@@ -2,6 +2,7 @@
 slug: "/blog/my-first-post"
 date: "2019-05-04"
 title: "My first blog post"
+author: Graham Healy
 # featuredImage: pupperino.png
 ---
 # Dotatissima ut induco
@@ -9,6 +10,12 @@ title: "My first blog post"
 ![Pupperinoo](./pupperino.png)
 
 ## Triste enixa agat cacumina subdit relictis prima
+
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
 
 Lorem markdownum stipite concutiensque passa temerare, et iecit. Ino foret sed
 dedit. Femineam tenetur et et una quod veteris, sic dat resupinus in caede.

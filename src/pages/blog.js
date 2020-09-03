@@ -29,6 +29,7 @@ export const pageQuery = graphql`
             date(fromNow: true)
             slug
             title
+            author
           }
         }
       }

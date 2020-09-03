@@ -3,9 +3,7 @@ import { graphql } from "gatsby"
 
 import BlogLayout from "../components/layouts/blog-layout"
 import BlogPostDetails from "../components/blog/blog-post-details"
-
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-deckDeckGoHighlightElement();
+import BlogPostContent from "../components/blog/blog-post-content"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -18,15 +16,14 @@ export default function Template({
       <div>
         <div className="blog-post">
           <BlogPostDetails frontmatter={frontmatter} />
-          <div
-            className="blog-post-content content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <BlogPostContent html={html} />
         </div>
       </div>
     </BlogLayout>
   )
 }
+
+// Load markdown post data
 export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
@@ -35,6 +32,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        author
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 630) {

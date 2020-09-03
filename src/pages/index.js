@@ -33,7 +33,7 @@ export default class Home extends React.Component {
     tl
       .from(title.current, 2, { opacity: 0, y: -30, ease: Power3.easeOut })
       .from(textBody.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
-      .from(contact.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=1")
+      .from(contact.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
       .from(photo.current, 1, { opacity: 0, y: 30, ease: Power3.easeOut }, "-=1")
       .from(yearAccent.current, 1, { opacity: 0, x: -30, ease: Power3.easeOut }, "-=0.5")
       .from(fullStackLogo.current, 1, { opacity: 0, x: -30, ease: Power3.easeOut }, "-=0.5")

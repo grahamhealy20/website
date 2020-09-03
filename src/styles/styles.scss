@@ -21,7 +21,7 @@ $navbar-item-hover-color: $tertiary;
 @import "~bulma/bulma.sass";
 
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, a {
     font-family: 'Poppins', 'sans-serif' !important;
 }
 
@@ -30,7 +30,12 @@ body {
 }
 
 a {
-    transition: color 0.2s ease-out !important;
+    transition: color 0.2s ease-out, font-weight 0.3s ease-out !important;
+    font-weight: 700 !important;
+
+    .blog-post:hover & {
+        color: $tertiary
+    }
 }
 
 ::-moz-selection { background: $tertiary; color: $secondary }
@@ -107,13 +112,14 @@ a {
     padding-top: 2rem;
 
     a {
+        margin-left: 7rem;
+
         &::after {
-        margin: 5rem;
-        content: '-';
+        
+        content: '';
         }
 
         &:last-child::after {
-            padding-left: 5rem;
             content: '';
         }
     }
@@ -121,7 +127,16 @@ a {
 
 // Blog layout
 .blog {
-    &.container {
+    min-height: 100vh;
+        background: rgb(255,255,255);
+        // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(236,230,244,1) 100%);
+        // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,206,247,1) 100%);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(220,210,236,1) 100%);
+        background-size: auto;
+        background-repeat: no-repeat;
+
+    .container {
+
         @media screen and (min-width: 1408px) {
             max-width: 680;
         }
@@ -131,5 +146,25 @@ a {
         @media screen and (min-width: 1024px) {
             max-width: 680px;
         }
+    }
+
+    .blog-post {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .blog-post-details {
+        padding-bottom: 50px;
+    }
+}
+
+.actions {
+    padding-top: 20px;
+}
+
+.read-more {
+    .read-more-icon {
+        padding-left: 5px;
+        vertical-align: sub;
     }
 }
