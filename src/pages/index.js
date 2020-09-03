@@ -1,5 +1,5 @@
 import React, { createRef } from "react"
-import Layout from "../components/layouts/layout"
+import FullScreenLayout from "../components/layouts/full-screen-layout"
 import Hero from '../components/home/hero'
 import YearAccent from '../components/misc/year-accent'
 import FullStackBadge from '../components/home/full-stack-badge'
@@ -16,7 +16,7 @@ export default class Home extends React.Component {
       fullStackLogo: createRef(null),
       yearAccent: createRef(null),
       title: createRef(null),
-      body: createRef(null),
+      textBody: createRef(null),
       contact: createRef(null),
       photo: createRef(null),
     }
@@ -26,11 +26,12 @@ export default class Home extends React.Component {
        This makes heavy use of react JS forward refs to
        provide GSAP (the animation engine) the elements to animate.
     */
-    let { fullStackLogo, yearAccent, title, body, contact, photo } = this.componentRefs
+    let { fullStackLogo, yearAccent, title, textBody, contact, photo } = this.componentRefs
+
     const tl = new TimelineMax();
     tl
       .from(title.current, 2, { opacity: 0, y: -30, ease: Power3.easeOut })
-      .from(body.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
+      .from(textBody.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
       .from(contact.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=1")
       .from(photo.current, 1, { opacity: 0, y: 30, ease: Power3.easeOut }, "-=1")
       .from(yearAccent.current, 1, { opacity: 0, x: -30, ease: Power3.easeOut }, "-=0.5")
@@ -45,13 +46,11 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <Layout>
+      <FullScreenLayout>
         <YearAccent ref={this.componentRefs.yearAccent} />
         <FullStackBadge ref={this.componentRefs.fullStackLogo} />
-        <div className="container">
-          <Hero className="hero" ref={this.componentRefs}></Hero>
-        </div>
-      </Layout>
+        <Hero className="hero" ref={this.componentRefs}></Hero>
+      </FullScreenLayout>
     )
   }
 }

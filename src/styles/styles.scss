@@ -15,9 +15,6 @@ $title-color: $primary;
 
 @import "~bulma/bulma.sass";
 
-body, html {
-    height: 100%;
-}
 
 ::-moz-selection { background: $tertiary; color: $secondary }
 ::selection { background: $tertiary; color: $secondary}
@@ -34,21 +31,20 @@ body, html {
 }
 
 .full-stack-badge {
-    position: absolute;
-    bottom: 60px;
+    position: fixed;
+    bottom: 65px;
     left: 60px;
 }
 
 // Set background image
 // TODO: Try to recreate this using css gradients
 html {
-    background-color: rgb(243,193,187);
-    background-image: url('./website_background_no_noise.jpg') !important;
+    background-image: url('./website_background.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-// Disable bulma scrollbar on desktop 
+// Set elements on high resolution devices
 @media screen and (min-width: 1024px) { 
     html {
         overflow: hidden;
@@ -74,15 +70,11 @@ html {
     }
 }
 
-@media screen and (max-width: 1220px) and (max-height : 900px){
+@media screen and (max-width: 1223px), (max-height : 900px){
     .full-stack-badge {
         display: none;    
     }
-}
 
-// Change some elements and change font sizes on mobile
-@media screen and (max-width: 1023px) {
-    // TODO: Create a mobile friendly background image for the different aspect-ratio
     .hero-title {
         font-size: 3rem;
     }
@@ -92,8 +84,8 @@ html {
     }
 }
 
-// Change some elements and change font sizes on mobile
-@media screen and (max-height: 1100px) {
+// Change spinner size on low height windows
+@media screen and (max-width: 2000px) and (max-height: 1200px) {
     .full-stack-badge img {
         width: 200px;
         height: 200px;
@@ -104,14 +96,13 @@ html {
     font-weight: 700;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     font-family: 'Poppins' !important;
 }
 
 body {
     font-family: "IBM Plex Mono", monospace;
 }
-
 
 .contact-me {
     padding-top: 2rem;

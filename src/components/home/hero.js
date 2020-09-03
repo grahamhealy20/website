@@ -5,11 +5,12 @@ import { Link } from "gatsby"
 
 const Hero = React.forwardRef((props, ref) => {
     return (
+
         <div className="columns is-desktop is-vcentered">
             <div className="column is-two-thirds ">
                 <section className="section about-me">
                     <h1 className="title hero-title" ref={ref['title']}>graham healy</h1>
-                    <p className="body" ref={ref['body']}>tempus elit at, iaculis elit. Curabitur fermentum turpis efficitur nulla facilisis viverra. Quisque congue ex non dolor tincidunt, id laoreet metus euismod. Nulla nibh risus, aliquet a lacus sed, ornare ornare turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer mi sem, iaculis eu nibh non, aliquet facilisis turpis. Sed non tortor ullamcorper, feugiat diam ac, pulvinar elit. Duis et elit non quam semper porttitor. In commodo finibus fringilla. Nunc ac risus et risus viverra malesuada. Sed eget commodo tellus. Quisque a nibh cursus, efficitur tortor sed, laoreet diam.</p>
+                    <p className="body" ref={ref['textBody']}>tempus elit at, iaculis elit. Curabitur fermentum turpis efficitur nulla facilisis viverra. Quisque congue ex non dolor tincidunt, id laoreet metus euismod. Nulla nibh risus, aliquet a lacus sed, ornare ornare turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer mi sem, iaculis eu nibh non, aliquet facilisis turpis. Sed non tortor ullamcorper, feugiat diam ac, pulvinar elit. Duis et elit non quam semper porttitor. In commodo finibus fringilla. Nunc ac risus et risus viverra malesuada. Sed eget commodo tellus. Quisque a nibh cursus, efficitur tortor sed, laoreet diam.</p>
                     <section className="contact-me" ref={ref['contact']}>
                         <a href="https://github.com/grahamhealy20" target="_blank" rel="noreferrer">GitHub</a>
                         <a href="https://www.linkedin.com/in/healygraham/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -26,6 +27,10 @@ const Hero = React.forwardRef((props, ref) => {
                 </div>
             </div>
         </div>
+
+
+
+
     )
 });
 
