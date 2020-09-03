@@ -7,7 +7,9 @@ const BlogLayout = ({ children }) => {
         <div className="blog">
             <div className="container">
                 <Navbar />
-                {children}
+                <div className="section">
+                    {children}
+                </div>
             </div>
         </div>
     )
