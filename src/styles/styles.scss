@@ -58,7 +58,7 @@ a {
         position: fixed;
     }
 
-    @media screen and (max-width: 1223px), (max-height : 900px) {
+    @media screen and (max-width: 1023px), (max-height : 900px) {
         position: static;
     }
 }
@@ -68,6 +68,7 @@ a {
     bottom: 65px;
     left: 60px;
 
+    // Set size for hi-res devices
     @media screen and (min-width: 1024px) {
         img { 
             width: 300px;
@@ -75,7 +76,16 @@ a {
         }
     }
 
-    @media screen and (max-width: 1223px), (max-height : 900px) {
+    // Resize to be smallet as the height decreases
+    @media screen and (max-width: 2000px) and (max-height: 1200px) { 
+        img {
+             width: 200px;
+             height: 200px;
+         }
+     }
+
+    // Disable on mobile
+    @media screen and (max-width: 1023px), (max-height : 900px) {
         display: none;
     }
 
@@ -112,8 +122,7 @@ a {
     padding-top: 2rem;
 
     a {
-        margin-left: 7rem;
-
+    
         &::after {
         
         content: '';
