@@ -97,7 +97,8 @@ a {
     color: $primary;
 
     background: #8f57e2;
-    background: $background-gradient;
+    // background: $background-gradient;
+    background: linear-gradient(142deg, #8f57e2 3%, #8f57e2 31%, #8f57e2 62%, #8f57e2 98%);
 }
 
 .hero-title {
