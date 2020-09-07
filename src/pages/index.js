@@ -32,8 +32,8 @@ export default class Home extends React.Component {
 
     const tl = new TimelineMax();
     tl
-      .from(heroBody.current, 3, { background: 'linear-gradient(142deg, #8f57e2 30%, #8f57e2 51%, #8f57e2 51%, #8f57e2 70%)', ease: Power3.easeOut }, "-=1.0")
-      .from(title.current, 2, { opacity: 0, y: -30, ease: Power3.easeOut })
+      .from(heroBody.current, 3, { background: '-webkit-linear-gradient(142deg, #8f57e2 30%, #8f57e2 51%, #8f57e2 51%, #8f57e2 70%)', ease: Power3.easeOut })
+      .from(title.current, 2, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=1.0")
       .from(textBody.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
       .from(contact.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
       .from(photo.current, 1, { opacity: 0, y: 30, ease: Power3.easeOut }, "-=1")
