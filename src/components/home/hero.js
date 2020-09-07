@@ -24,7 +24,7 @@ const Hero = React.forwardRef((props, ref) => {
                     <h1 className="title hero-title" ref={ref['title']}>graham healy</h1>
                     <p className="hero-text body" ref={ref['textBody']}>tempus elit at, iaculis elit. Curabitur fermentum turpis efficitur nulla facilisis viverra. Quisque congue ex non dolor tincidunt, id laoreet metus euismod. Nulla nibh risus, aliquet a lacus sed, ornare ornare turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer mi sem, iaculis eu nibh non, aliquet facilisis turpis. Sed non tortor ullamcorper, feugiat diam ac, pulvinar elit. Duis et elit non quam semper porttitor. In commodo finibus fringilla. Nunc ac risus et risus viverra malesuada. Sed eget commodo tellus. Quisque a nibh cursus, efficitur tortor sed, laoreet diam.</p>
                     <section className="contact-me has-text-centered" ref={ref['contact']}>
-                        <nav class="level">
+                        <nav className="level">
                             <div className="level-item has-text-centered">
                                 <a href="https://github.com/grahamhealy20" target="_blank" rel="noreferrer">GitHub</a>
                             </div>
