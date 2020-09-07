@@ -32,7 +32,13 @@ export default class Home extends React.Component {
 
     const tl = new TimelineMax();
     tl
-      .from(heroBody.current, 3, { background: 'linear-gradient(142deg, #8f57e2 50%, #8f57e2 51%, #8f57e2 51%, #8f57e2 63%)', ease: Power3.easeOut })
+      .fromTo(heroBody.current,
+        { background: 'linear-gradient(142deg, #8f57e2 50%, #8f57e2 51%, #8f57e2 51%, #8f57e2 63%)' },
+        {
+          background: ' linear-gradient(142deg, #8f57e2 3%, #fbcab8 31%, #fbcab8 62%, #8f57e2 98%)',
+          duration: 3,
+          ease: Power3.easeOut
+        })
       .from(title.current, 2, { autoAlpha: 0, y: -30, ease: Power3.easeOut }, "-=1.0")
       .from(textBody.current, 1, { autoAlpha: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
       .from(contact.current, 1, { autoAlpha: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
@@ -49,7 +55,7 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <FullScreenLayout ref={this.componentRefs.heroBody}>
+      <FullScreenLayout ref={this.componentRefs.heroBody} >
         <YearAccent ref={this.componentRefs.yearAccent} />
         <FullStackBadge ref={this.componentRefs.fullStackLogo} />
         <Hero className="hero" ref={this.componentRefs}></Hero>
