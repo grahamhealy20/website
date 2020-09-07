@@ -92,13 +92,21 @@ a {
     }
 }
 
-// Set background image for hero on home page
+// Set background for hero on home page
 .hero {
     color: $primary;
-
+    z-index: 0;
     background: #8f57e2;
-    // background: $background-gradient;
-    background: linear-gradient(142deg, #8f57e2 3%, #8f57e2 31%, #8f57e2 62%, #8f57e2 98%);
+    background: $background-gradient;
+}
+
+.hero::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #8f57e2;
 }
 
 .hero-title {
