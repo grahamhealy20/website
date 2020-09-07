@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import BlogLayout from "../components/layouts/blog-layout"
 import BlogPostDetails from "../components/blog/blog-post-details"
 import BlogPostContent from "../components/blog/blog-post-content"
+import SEO from '../components/seo';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -13,6 +14,7 @@ export default function Template({
 
   return (
     <BlogLayout>
+      <SEO title={frontmatter.title} article />
       <div>
         <div className="blog-post">
           <BlogPostDetails frontmatter={frontmatter} />

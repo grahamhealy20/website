@@ -18,7 +18,9 @@
     "bulma": "^0.9.0",
     "gatsby": "^2.23.12",
     "gatsby-image": "^2.4.16",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.31",
     "gatsby-remark-highlight-code": "^2.0.0",
@@ -30,6 +32,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
     "typeface-ibm-plex-mono": "0.0.61",
     "typeface-poppins": "0.0.72"

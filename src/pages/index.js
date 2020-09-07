@@ -1,10 +1,11 @@
 import React, { createRef } from "react"
-import FullScreenLayout from "../components/layouts/full-screen-layout"
+import HomeLayout from "../components/layouts/home-layout"
 import Hero from '../components/home/hero'
 import YearAccent from '../components/misc/year-accent'
 import FullStackBadge from '../components/home/full-stack-badge'
-import { Linear, TweenMax, TimelineMax, Power3 } from "gsap";
+import SEO from '../components/seo';
 
+import { Linear, TweenMax, TimelineMax, Power3 } from "gsap";
 
 export default class Home extends React.Component {
   constructor() {
@@ -55,11 +56,12 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <FullScreenLayout ref={this.componentRefs.heroBody} >
+      <HomeLayout ref={this.componentRefs.heroBody} >
+        <SEO title={"Home"} />
         <YearAccent ref={this.componentRefs.yearAccent} />
         <FullStackBadge ref={this.componentRefs.fullStackLogo} />
         <Hero className="hero" ref={this.componentRefs}></Hero>
-      </FullScreenLayout>
+      </HomeLayout>
     )
   }
 }

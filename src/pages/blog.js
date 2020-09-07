@@ -1,8 +1,12 @@
+
 import React from "react"
 import { graphql } from 'gatsby'
 
 import BlogLayout from "../components/layouts/blog-layout"
 import BlogPostLink from "../components/blog/blog-post-link"
+
+import SEO from '../components/seo';
+
 
 const BlogPage = ({
   data: {
@@ -14,6 +18,7 @@ const BlogPage = ({
     .map(edge => <BlogPostLink key={edge.node.id} post={edge.node} />)
   return (
     <BlogLayout>
+      <SEO title={"Blog"} />
       <div>{Posts}</div>
     </BlogLayout>
   )
