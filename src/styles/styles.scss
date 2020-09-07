@@ -8,6 +8,7 @@ $tertiary: #ff0084;
 $background-primary: #8f57e2;
 $background-secondary: #f3c1bb;
 
+$background-initial-gradient: linear-gradient(142deg, #8f57e2 50%, #8f57e2 51%, #8f57e2 51%, #8f57e2 63%);
 $background-gradient: linear-gradient(142deg, #8f57e2 3%, #fbcab8 31%, #fbcab8 62%, #8f57e2 98%);
 
 $title-color: $primary;
@@ -46,6 +47,7 @@ a {
 // Static/fixed elements
 .year-accent {
     position: fixed;
+    visibility: hidden;
     top: 30px;
     left: 30px;
     font-size: 2rem;
@@ -63,6 +65,10 @@ a {
     position: fixed;
     bottom: 65px;
     left: 60px;
+    
+    img {
+        visibility: hidden;
+    }
 
     // Set size for hi-res devices
     @media screen and (min-width: $fullhd) {
@@ -95,6 +101,7 @@ a {
 }
 
 .hero-title {
+    visibility: hidden;
     font-weight: 700;
 
     @media screen and (min-width: 769px) {
@@ -106,7 +113,12 @@ a {
     }
 }
 
+.hero-text {
+    visibility: hidden;
+}
+
 .contact-me {
+    visibility: hidden;
     padding-top: 2rem;
 
     a {
@@ -120,6 +132,10 @@ a {
             content: '';
         }
     }
+}
+
+.profile-image img {
+    visibility: hidden;
 }
 
 // Blog layout
