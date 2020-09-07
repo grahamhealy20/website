@@ -14,6 +14,7 @@ export default class Home extends React.Component {
      */
     super();
     this.componentRefs = {
+      heroBody: createRef(null),
       fullStackLogo: createRef(null),
       yearAccent: createRef(null),
       title: createRef(null),
@@ -27,10 +28,11 @@ export default class Home extends React.Component {
        This makes heavy use of react JS forward refs to
        provide GSAP (the animation engine) the elements to animate.
     */
-    let { fullStackLogo, yearAccent, title, textBody, contact, photo } = this.componentRefs
+    let { heroBody, fullStackLogo, yearAccent, title, textBody, contact, photo } = this.componentRefs
 
     const tl = new TimelineMax();
     tl
+      .from(heroBody.current, 3, { background: 'linear-gradient(142deg, #8f57e2 30%, #8f57e2 51%, #8f57e2 51%, #8f57e2 70%)', ease: Power3.easeOut })
       .from(title.current, 2, { opacity: 0, y: -30, ease: Power3.easeOut })
       .from(textBody.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
       .from(contact.current, 1, { opacity: 0, y: -30, ease: Power3.easeOut }, "-=0.5")
@@ -47,7 +49,7 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <FullScreenLayout>
+      <FullScreenLayout ref={this.componentRefs.heroBody}>
         <YearAccent ref={this.componentRefs.yearAccent} />
         <FullStackBadge ref={this.componentRefs.fullStackLogo} />
         <Hero className="hero" ref={this.componentRefs}></Hero>

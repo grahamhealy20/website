@@ -9,6 +9,8 @@ $tertiary: #ff0084;
 $background-primary: #8f57e2;
 $background-secondary: #f3c1bb;
 
+$background-gradient: linear-gradient(142deg, #8f57e2 3%, #fbcab8 31%, #fbcab8 62%, #8f57e2 98%);
+
 // If need, change your variables before importing Bulma
 $title-color: $primary;
 $content-heading-color: $primary;
@@ -97,13 +99,12 @@ a {
     }
 }
 
-// Set background image
-// TODO: Try to recreate this using css gradients
+// Set background image for hero on home page
 .hero {
-    background-image: url('./website_background.jpg') !important;
-    background-size: cover;
-    background-repeat: no-repeat;
     color: $primary;
+
+    background: #fbcab8;
+    background: $background-gradient;
 }
 
 .hero-title {
@@ -138,8 +139,6 @@ a {
 .blog {
     min-height: 100vh;
         background: rgb(255,255,255);
-        // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(236,230,244,1) 100%);
-        // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,206,247,1) 100%);
         background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(220,210,236,1) 100%);
         background-size: auto;
         background-repeat: no-repeat;

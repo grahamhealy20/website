@@ -1,15 +1,15 @@
 import React from 'react'
 
-const FullScreenLayout = ({ children }) => {
+const FullScreenLayout = React.forwardRef((props, ref) => {
     return (
-        <section className="hero is-fullheight">
+        <section ref={ref} className="hero is-fullheight">
             <div className="hero-body">
                 <div className="container">
-                    {children}
+                    {props.children}
                 </div>
             </div>
         </section>
     )
-}
+})
 
 export default FullScreenLayout
