@@ -5,13 +5,11 @@ $primary: #5f25f5;
 $secondary: #fbcab8;
 $tertiary: #ff0084;
 
-// TODO: Try to rereate backgroud image as a gradient
 $background-primary: #8f57e2;
 $background-secondary: #f3c1bb;
 
 $background-gradient: linear-gradient(142deg, #8f57e2 3%, #fbcab8 31%, #fbcab8 62%, #8f57e2 98%);
 
-// If need, change your variables before importing Bulma
 $title-color: $primary;
 $content-heading-color: $primary;
 
@@ -138,10 +136,10 @@ a {
 // Blog layout
 .blog {
     min-height: 100vh;
-        background: rgb(255,255,255);
-        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(220,210,236,1) 100%);
-        background-size: auto;
-        background-repeat: no-repeat;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(220,210,236,1) 100%);
+    background-size: auto;
+    background-repeat: no-repeat;
 
     .container {
 
