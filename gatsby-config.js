@@ -28,7 +28,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-              showCaptions: true
+              showCaptions: true,
+              withWebp: true,
             },
           },
           {
@@ -44,5 +45,11 @@ module.exports = {
         path: `${__dirname}/src/markdown`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+      },
+    }
   ],
 }

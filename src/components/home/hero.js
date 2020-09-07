@@ -1,11 +1,23 @@
 import React from 'react';
-import profilePhoto from "./profile.jpg"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { Link } from "gatsby"
 
 const Hero = React.forwardRef((props, ref) => {
-    return (
 
+    const data = useStaticQuery(graphql`
+    query {
+        file(relativePath: { eq: "profile.jpg" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                }
+            }
+        }
+    }
+    `)
+    return (
         <div className="columns is-vcentered">
             <div className="column is-two-thirds ">
                 <section className="section about-me">
@@ -29,8 +41,8 @@ const Hero = React.forwardRef((props, ref) => {
             </div>
             <div className="profile-image column">
                 <div className="section">
-                    <figure className="image is-3by4">
-                        <img className="profile-photo" src={profilePhoto} alt="Graham Healy" ref={ref['photo']}></img>
+                    <figure className="profile-photo" ref={ref['photo']}>
+                        <Img fluid={data.file.childImageSharp.fluid} alt="Graham Healy" />
                     </figure>
                 </div>
             </div>
